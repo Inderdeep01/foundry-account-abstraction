@@ -12,6 +12,8 @@ import {DevOpsTools} from "lib/foundry-devops/src/DevOpsTools.sol";
 
 contract SendPackedUserOp is Script {
     using MessageHashUtils for bytes32;
+
+    address constant RANDOM_APPROVER = 0x70997970C51812dc3A010C7d01b50e0d17dc79C8;
     function run() public {
         HelperConfig helperConfig = new HelperConfig();
         address dest = helperConfig.getConfig().usdc; // USDC address
